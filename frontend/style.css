@@ -390,37 +390,53 @@ opacity:1;
    HERO
 ========================================================== */
 
+/* ==========================================================
+   HERO
+========================================================== */
+
 .hero{
 
     display:grid;
-
     grid-template-columns:1.2fr .8fr;
+    align-items:center;
+    gap:60px;
 
-    gap:40px;
-
-    padding:45px;
-
+    padding:20px 60px;
     margin-bottom:40px;
 
     border-radius:30px;
 
     background:var(--glass);
-
     backdrop-filter:blur(20px);
+    -webkit-backdrop-filter:blur(20px);
 
     box-shadow:var(--shadow);
+
+    overflow:hidden;
+
+}
+
+/* ================= LEFT ================= */
+
+.hero-left{
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
 
 }
 
 .hero-left h2{
 
-    color:white;
+    color:#fff;
 
     font-size:42px;
 
     line-height:1.3;
 
     margin-bottom:20px;
+
+    font-weight:700;
 
 }
 
@@ -436,7 +452,21 @@ opacity:1;
 
 }
 
+/* ================= RIGHT ================= */
 
+.hero-right{
+
+    display:flex;
+
+    justify-content:flex-end;
+
+    align-items:center;
+
+    width:100%;
+
+    position:relative;
+
+}
 
 .hero-right img{
 
@@ -444,29 +474,103 @@ opacity:1;
 
     max-width:380px;
 
+    height:auto;
+
+    display:block;
+
+    object-fit:contain;
+
     animation:float 4s ease-in-out infinite;
 
 }
 
+/* ================= FLOAT ANIMATION ================= */
+
 @keyframes float{
 
-0%{
+    0%{
 
-transform:translateY(0);
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-15px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
 
 }
 
-50%{
+/* ================= TABLET ================= */
 
-transform:translateY(-15px);
+@media(max-width:992px){
+
+    .hero{
+
+        grid-template-columns:1fr;
+
+        text-align:center;
+
+        gap:40px;
+
+        padding:40px;
+
+    }
+
+    .hero-left{
+
+        align-items:center;
+
+    }
+
+    .hero-right{
+
+        justify-content:center;
+
+    }
+
+    .hero-right img{
+
+        max-width:420px;
+
+    }
 
 }
 
-100%{
+/* ================= MOBILE ================= */
 
-transform:translateY(0);
+@media(max-width:576px){
 
-}
+    .hero{
+
+        padding:25px;
+
+    }
+
+    .hero-left h2{
+
+        font-size:32px;
+
+    }
+
+    .hero-left p{
+
+        font-size:16px;
+
+    }
+
+    .hero-right img{
+
+        max-width:300px;
+
+    }
 
 }
 /* ==========================================================

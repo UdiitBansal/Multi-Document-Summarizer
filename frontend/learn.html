@@ -7,7 +7,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Learn More | Research AI Assistant</title>
+<title>Learn More | DocuMind AI Assistant</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 
@@ -1268,9 +1268,7 @@ box-shadow:0 10px 25px rgba(0,0,0,.25);
 <nav>
 
 <div class="logo">
-
-Research<span>AI</span>
-
+    <a href="index.html">DocuMind<span>AI</span></a>
 </div>
 
 <div class="nav-links">
@@ -1315,7 +1313,7 @@ Understand Research Papers Faster with AI
 
 <p>
 
-Research AI Assistant is an intelligent platform designed to simplify
+DocuMind AI Assistant is an intelligent platform designed to simplify
 academic and technical research. Upload multiple research papers,
 generate executive summaries, detect contradictions, extract key themes,
 and ask questions using advanced AI models—all in one place.
@@ -1462,7 +1460,7 @@ Platform Highlights
                 line-height:1.9;
                 margin-bottom:22px;">
 
-                Research AI Assistant helps students, researchers,
+                DocuMind AI Assistant helps students, researchers,
                 professionals, and organizations analyze multiple
                 research papers using Artificial Intelligence.
 
@@ -1652,7 +1650,7 @@ color:#2563eb;
 border-radius:40px;
 font-weight:600;">
 
-Why Choose Research AI
+Why Choose DocuMind AI
 
 </span>
 
@@ -1777,7 +1775,7 @@ for faster understanding.
 </div>
 
 </section>
-<!-- ====================================
+ <!-- ====================================
         AI WORKFLOW
 ==================================== -->
 
@@ -1802,7 +1800,7 @@ for faster understanding.
         margin-top:22px;
         color:#0f172a;">
 
-            How Research AI Works
+            How DocuMind AI Works
 
         </h2>
 
@@ -2099,270 +2097,228 @@ for faster understanding.
     </div>
 
 </section>
+
+
 <!-- ==========================================
-        SYSTEM ARCHITECTURE
+        TECHNOLOGIES SLIDER
 ========================================== -->
 
-<section id="architecture" style="background:#ffffff;">
+<section style="padding:90px 8%;background:#f8fbff;overflow:hidden;">
 
-    <div style="text-align:center;margin-bottom:60px;">
+    <div style="text-align:center;margin-bottom:50px;">
 
-        <span style="
-        background:#eaf2ff;
-        color:#2563eb;
-        padding:10px 22px;
-        border-radius:40px;
-        font-weight:600;">
-
-            System Architecture
-
+        <span class="section-tag">
+            Technologies Used
         </span>
 
-        <h2 style="
-        font-size:44px;
-        margin-top:20px;
-        color:#0f172a;">
-
-            How Research AI Works
-
+        <h2 class="section-title">
+            Modern AI Technology Stack
         </h2>
 
-        <p style="
-        max-width:760px;
-        margin:20px auto;
-        color:#64748b;
-        line-height:1.9;">
-
-            Every uploaded document passes through multiple AI-powered
-            stages to deliver meaningful insights, summaries,
-            semantic search and intelligent answers.
-
+        <p class="section-description">
+            Our platform combines Artificial Intelligence, Retrieval-Augmented
+            Generation (RAG), Vector Search, and modern web technologies to
+            deliver intelligent multi-document analysis.
         </p>
 
     </div>
 
-    <div class="architecture-grid">
+    <div style="display:flex;align-items:center;gap:20px;">
 
-        <div class="architecture-card">
+        <button onclick="scrollTech(-320)"
+            style="width:55px;height:55px;border:none;border-radius:50%;background:#2563eb;color:#fff;font-size:22px;cursor:pointer;">
+            <i class="fa-solid fa-angle-left"></i>
+        </button>
 
-            <i class="fa-solid fa-upload"></i>
+        <div id="techSlider"
+            style="display:flex;gap:22px;overflow-x:auto;scroll-behavior:smooth;flex:1;padding:10px;scrollbar-width:none;-ms-overflow-style:none;">
 
-            <h3>Upload PDFs</h3>
+            <style>
+                #techSlider::-webkit-scrollbar {
+                    display: none;
+                }
+            </style>
 
-            <p>
+            <!-- Card -->
 
-                Upload one or multiple research papers securely.
+            <div style="min-width:230px;background:#fff;padding:35px 25px;border-radius:18px;text-align:center;box-shadow:0 12px 30px rgba(0,0,0,.08);transition:.3s;"
+                onmouseover="this.style.transform='translateY(-8px)';this.style.boxShadow='0 20px 40px rgba(37,99,235,.2)'"
+                onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 12px 30px rgba(0,0,0,.08)'">
 
-            </p>
+                <i class="fa-brands fa-python"
+                    style="font-size:50px;color:#2563eb;margin-bottom:18px;"></i>
+
+                <h3>Python</h3>
+
+                <p style="color:#64748b;">Core Programming</p>
+
+            </div>
+
+            <div style="min-width:230px;background:#fff;padding:35px 25px;border-radius:18px;text-align:center;box-shadow:0 12px 30px rgba(0,0,0,.08);transition:.3s;"
+                onmouseover="this.style.transform='translateY(-8px)';this.style.boxShadow='0 20px 40px rgba(37,99,235,.2)'"
+                onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 12px 30px rgba(0,0,0,.08)'">
+
+                <i class="fa-solid fa-server"
+                    style="font-size:50px;color:#2563eb;margin-bottom:18px;"></i>
+
+                <h3>FastAPI</h3>
+
+                <p style="color:#64748b;">Backend Framework</p>
+
+            </div>
+
+            <div style="min-width:230px;background:#fff;padding:35px 25px;border-radius:18px;text-align:center;box-shadow:0 12px 30px rgba(0,0,0,.08);transition:.3s;"
+                onmouseover="this.style.transform='translateY(-8px)';this.style.boxShadow='0 20px 40px rgba(37,99,235,.2)'"
+                onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 12px 30px rgba(0,0,0,.08)'">
+
+                <i class="fa-solid fa-database"
+                    style="font-size:50px;color:#2563eb;margin-bottom:18px;"></i>
+
+                <h3>ChromaDB</h3>
+
+                <p style="color:#64748b;">Vector Database</p>
+
+            </div>
+
+            <div style="min-width:230px;background:#fff;padding:35px 25px;border-radius:18px;text-align:center;box-shadow:0 12px 30px rgba(0,0,0,.08);transition:.3s;"
+                onmouseover="this.style.transform='translateY(-8px)';this.style.boxShadow='0 20px 40px rgba(37,99,235,.2)'"
+                onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 12px 30px rgba(0,0,0,.08)'">
+
+                <i class="fa-solid fa-magnifying-glass"
+                    style="font-size:50px;color:#2563eb;margin-bottom:18px;"></i>
+
+                <h3>BM25</h3>
+
+                <p style="color:#64748b;">Keyword Search</p>
+
+            </div>
+
+            <div style="min-width:230px;background:#fff;padding:35px 25px;border-radius:18px;text-align:center;box-shadow:0 12px 30px rgba(0,0,0,.08);transition:.3s;"
+                onmouseover="this.style.transform='translateY(-8px)';this.style.boxShadow='0 20px 40px rgba(37,99,235,.2)'"
+                onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 12px 30px rgba(0,0,0,.08)'">
+
+                <i class="fa-solid fa-brain"
+                    style="font-size:50px;color:#2563eb;margin-bottom:18px;"></i>
+
+                <h3>Sentence Transformers</h3>
+
+                <p style="color:#64748b;">Embeddings</p>
+
+            </div>
+
+            <div style="min-width:230px;background:#fff;padding:35px 25px;border-radius:18px;text-align:center;box-shadow:0 12px 30px rgba(0,0,0,.08);transition:.3s;"
+                onmouseover="this.style.transform='translateY(-8px)';this.style.boxShadow='0 20px 40px rgba(37,99,235,.2)'"
+                onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 12px 30px rgba(0,0,0,.08)'">
+
+                <i class="fa-solid fa-microchip"
+                    style="font-size:50px;color:#2563eb;margin-bottom:18px;"></i>
+
+                <h3>Ollama</h3>
+
+                <p style="color:#64748b;">LLM Runtime</p>
+
+            </div>
+
+            <div style="min-width:230px;background:#fff;padding:35px 25px;border-radius:18px;text-align:center;box-shadow:0 12px 30px rgba(0,0,0,.08);transition:.3s;"
+                onmouseover="this.style.transform='translateY(-8px)';this.style.boxShadow='0 20px 40px rgba(37,99,235,.2)'"
+                onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 12px 30px rgba(0,0,0,.08)'">
+
+                <i class="fa-solid fa-layer-group"
+                    style="font-size:50px;color:#2563eb;margin-bottom:18px;"></i>
+
+                <h3>RAG</h3>
+
+                <p style="color:#64748b;">Retrieval-Augmented Generation</p>
+
+            </div>
+
+            <div style="min-width:230px;background:#fff;padding:35px 25px;border-radius:18px;text-align:center;box-shadow:0 12px 30px rgba(0,0,0,.08);transition:.3s;"
+                onmouseover="this.style.transform='translateY(-8px)';this.style.boxShadow='0 20px 40px rgba(37,99,235,.2)'"
+                onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 12px 30px rgba(0,0,0,.08)'">
+
+                <i class="fa-brands fa-html5"
+                    style="font-size:50px;color:#2563eb;margin-bottom:18px;"></i>
+
+                <h3>HTML5</h3>
+
+                <p style="color:#64748b;">Frontend</p>
+
+            </div>
+
+            <div style="min-width:230px;background:#fff;padding:35px 25px;border-radius:18px;text-align:center;box-shadow:0 12px 30px rgba(0,0,0,.08);transition:.3s;"
+                onmouseover="this.style.transform='translateY(-8px)';this.style.boxShadow='0 20px 40px rgba(37,99,235,.2)'"
+                onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 12px 30px rgba(0,0,0,.08)'">
+
+                <i class="fa-brands fa-css3-alt"
+                    style="font-size:50px;color:#2563eb;margin-bottom:18px;"></i>
+
+                <h3>CSS3</h3>
+
+                <p style="color:#64748b;">Styling</p>
+
+            </div>
+
+            <div style="min-width:230px;background:#fff;padding:35px 25px;border-radius:18px;text-align:center;box-shadow:0 12px 30px rgba(0,0,0,.08);transition:.3s;"
+                onmouseover="this.style.transform='translateY(-8px)';this.style.boxShadow='0 20px 40px rgba(37,99,235,.2)'"
+                onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 12px 30px rgba(0,0,0,.08)'">
+
+                <i class="fa-brands fa-js"
+                    style="font-size:50px;color:#2563eb;margin-bottom:18px;"></i>
+
+                <h3>JavaScript</h3>
+
+                <p style="color:#64748b;">Frontend Logic</p>
+
+            </div>
+
+            <div style="min-width:230px;background:#fff;padding:35px 25px;border-radius:18px;text-align:center;box-shadow:0 12px 30px rgba(0,0,0,.08);transition:.3s;"
+                onmouseover="this.style.transform='translateY(-8px)';this.style.boxShadow='0 20px 40px rgba(37,99,235,.2)'"
+                onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 12px 30px rgba(0,0,0,.08)'">
+
+                <i class="fa-brands fa-github"
+                    style="font-size:50px;color:#2563eb;margin-bottom:18px;"></i>
+
+                <h3>GitHub</h3>
+
+                <p style="color:#64748b;">Version Control</p>
+
+            </div>
 
         </div>
 
-        <div class="architecture-card">
-
-            <i class="fa-solid fa-file-lines"></i>
-
-            <h3>Extract Text</h3>
-
-            <p>
-
-                AI extracts clean text from every uploaded PDF.
-
-            </p>
-
-        </div>
-
-        <div class="architecture-card">
-
-            <i class="fa-solid fa-layer-group"></i>
-
-            <h3>Chunk Documents</h3>
-
-            <p>
-
-                Large documents are divided into meaningful chunks.
-
-            </p>
-
-        </div>
-
-        <div class="architecture-card">
-
-            <i class="fa-solid fa-brain"></i>
-
-            <h3>Generate Embeddings</h3>
-
-            <p>
-
-                Semantic vectors are created for intelligent retrieval.
-
-            </p>
-
-        </div>
-
-        <div class="architecture-card">
-
-            <i class="fa-solid fa-magnifying-glass"></i>
-
-            <h3>Vector Search</h3>
-
-            <p>
-
-                AI searches relevant information instantly.
-
-            </p>
-
-        </div>
-
-        <div class="architecture-card">
-
-            <i class="fa-solid fa-comments"></i>
-
-            <h3>Answer Generation</h3>
-
-            <p>
-
-                LLM generates summaries and answers from retrieved data.
-
-            </p>
-
-        </div>
+        <button onclick="scrollTech(320)"
+            style="width:55px;height:55px;border:none;border-radius:50%;background:#2563eb;color:#fff;font-size:22px;cursor:pointer;">
+            <i class="fa-solid fa-angle-right"></i>
+        </button>
 
     </div>
 
 </section>
 
-<!-- ==========================================
-        TECHNOLOGIES
-========================================== -->
+<script>
+const slider = document.getElementById("techSlider");
 
-<section style="background:#f8fbff;">
+function scrollTech(value){
+    slider.scrollBy({
+        left:value,
+        behavior:"smooth"
+    });
+}
 
-<div style="text-align:center;">
-
-<span class="section-tag">
-
-Technologies Used
-
-</span>
-
-<h2 class="section-title">
-
-Modern AI Technology Stack
-
-</h2>
-
-<p class="section-description">
-
-Our platform combines Machine Learning,
-Natural Language Processing and modern
-web technologies to deliver a seamless
-research experience.
-
-</p>
-
-</div>
-
-<div class="tech-grid">
-
-<div class="tech-card">
-
-<i class="fa-brands fa-python"></i>
-
-<h3>Python</h3>
-
-</div>
-
-<div class="tech-card">
-
-<i class="fa-solid fa-robot"></i>
-
-<h3>FastAPI</h3>
-
-</div>
-
-<div class="tech-card">
-
-<i class="fa-solid fa-database"></i>
-
-<h3>ChromaDB</h3>
-
-</div>
-
-<div class="tech-card">
-
-<i class="fa-solid fa-language"></i>
-
-<h3>LangChain</h3>
-
-</div>
-
-<div class="tech-card">
-
-<i class="fa-solid fa-microchip"></i>
-
-<h3>Ollama</h3>
-
-</div>
-
-<div class="tech-card">
-
-<i class="fa-solid fa-brain"></i>
-
-<h3>Llama 3.2</h3>
-
-</div>
-
-<div class="tech-card">
-
-<i class="fa-brands fa-html5"></i>
-
-<h3>HTML5</h3>
-
-</div>
-
-<div class="tech-card">
-
-<i class="fa-brands fa-css3-alt"></i>
-
-<h3>CSS3</h3>
-
-</div>
-
-<div class="tech-card">
-
-<i class="fa-brands fa-js"></i>
-
-<h3>JavaScript</h3>
-
-</div>
-
-<div class="tech-card">
-
-<i class="fa-solid fa-server"></i>
-
-<h3>REST API</h3>
-
-</div>
-
-<div class="tech-card">
-
-<i class="fa-solid fa-code-branch"></i>
-
-<h3>GitHub</h3>
-
-</div>
-
-<div class="tech-card">
-
-<i class="fa-solid fa-cloud"></i>
-
-<h3>AI Services</h3>
-
-</div>
-
-</div>
-
-</section>
+setInterval(()=>{
+    if(slider.scrollLeft + slider.clientWidth >= slider.scrollWidth - 5){
+        slider.scrollTo({
+            left:0,
+            behavior:"smooth"
+        });
+    }else{
+        slider.scrollBy({
+            left:260,
+            behavior:"smooth"
+        });
+    }
+},3000);
+</script>
 <section class="journey-section">
 
 <div class="section-heading" style="text-align:center;>
@@ -2375,7 +2331,7 @@ Project Timeline & Development Process
 
 <p class="section-description">
 
-A complete overview of how the Research AI Assistant
+A complete overview of how the DocuMind AI Assistant
 was planned, designed, developed and deployed.
 
 </p>
@@ -2606,7 +2562,7 @@ What Users Say
 
 <img src="https://i.pravatar.cc/100?img=12">
 
-<h3>Sarah Johnson</h3>
+<h3>John</h3>
 
 <h5>Research Scholar</h5>
 
@@ -2622,7 +2578,7 @@ What Users Say
 
 <img src="https://i.pravatar.cc/100?img=32">
 
-<h3>Rahul Sharma</h3>
+<h3>Emily Davis</h3>
 
 <h5>Data Scientist</h5>
 
@@ -2638,7 +2594,7 @@ What Users Say
 
 <img src="https://i.pravatar.cc/100?img=18">
 
-<h3>Emily Davis</h3>
+<h3>Dwayne</h3>
 
 <h5>Professor</h5>
 
@@ -2676,7 +2632,7 @@ What Users Say
                 font-size:30px;
                 margin-bottom:20px;">
 
-                Research<span style="color:#3b82f6;">AI</span>
+                DocuMind<span style="color:#3b82f6;">AI</span>
 
             </h2>
 
@@ -2684,7 +2640,7 @@ What Users Say
                 line-height:1.9;
                 color:#94a3b8;">
 
-                Research AI Assistant is an intelligent platform
+                DocuMind AI Assistant is an intelligent platform
                 that analyzes multiple research documents,
                 generates AI-powered summaries,
                 detects contradictions,
@@ -2714,7 +2670,7 @@ What Users Say
 
                 </a>
 
-                <a href="#"
+                <a href="https://www.linkedin.com/in/udiit-bansal-9bb648249/"
                 style="
                 width:45px;
                 height:45px;
@@ -2730,7 +2686,7 @@ What Users Say
 
                 </a>
 
-                <a href="#"
+                <a href="https://github.com/UdiitBansal"
                 style="
                 width:45px;
                 height:45px;
@@ -2850,7 +2806,7 @@ What Users Say
 
                 <i class="fa-solid fa-envelope"></i>
 
-                support@researchai.com
+                support@documindai.com
 
             </p>
 
@@ -2880,7 +2836,7 @@ What Users Say
 
         <p style="color:#94a3b8;">
 
-            © 2026 Research AI Assistant. All Rights Reserved.
+            © 2026 DocuMind AI Assistant. All Rights Reserved.
 
         </p>
 
