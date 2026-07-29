@@ -81,13 +81,7 @@ href="style.css">
 
         </a>
 
-        <a href="#sourcesSection">
-
-            <i class="fa-solid fa-book-open"></i>
-
-            Sources
-
-        </a>
+     
 
         <a href="#chatHistory">
             <i class="fa-solid fa-clock-rotate-left"></i>
@@ -330,39 +324,32 @@ href="style.css">
     </div>
     
 
-    <div class="card" id="summary">
+    <div class="card">
 
         <div class="card-header">
 
-            <i class="fa-solid fa-file-lines"></i>
+            <i class="fa-solid fa-lightbulb"></i>
 
-            <h2>Executive Summary</h2>
+            <h2>Suggested Questions</h2>
 
         </div>
 
-        <div id="summaryBox">
+        <div class="feature-tags">
 
-            <div class="welcome-box">
+            <span>&#8226; Summarize all PDFs<br></span>
 
-                <h3>
+            <span>&#8226; Compare Documents<br></span>
 
-                    No Summary Generated
+            <span>&#8226; Explain Architecture<br></span>
 
-                </h3>
+            <span>&#8226; Technologies Used<br></span>
 
-                <p>
+            <span>&#8226; Generate Report<br></span>
 
-                    Upload PDF documents.
-
-                    The application will automatically
-
-                    process all documents and generate
-
-                    an executive summary.
-
-                </p>
-
-            </div>
+            <span>&#8226; Common Topics<br></span>
+            
+            <span>&#8226; Extract Key Claims<br></span>
+            <span>&#8226; Detect Contradictions<br></span>
 
         </div>
 
@@ -402,32 +389,36 @@ href="style.css">
 
     </div>
 
+    
     <div class="card">
 
         <div class="card-header">
 
-            <i class="fa-solid fa-lightbulb"></i>
+            <i class="fa-solid fa-clock-rotate-left"></i>
 
-            <h2>Suggested Questions</h2>
+            <h2>Recent Questions</h2>
 
         </div>
 
-        <div class="feature-tags">
+        <div id="chatHistory">
 
-            <span>&#8226; Summarize all PDFs<br></span>
+            <div class="empty-state">
 
-            <span>&#8226; Compare Documents<br></span>
+                <h3>
 
-            <span>&#8226; Explain Architecture<br></span>
+                    No Questions Yet
 
-            <span>&#8226; Technologies Used<br></span>
+                </h3>
 
-            <span>&#8226; Generate Report<br></span>
+                <p>
 
-            <span>&#8226; Common Topics<br></span>
-            
-            <span>&#8226; Extract Key Claims<br></span>
-            <span>&#8226; Detect Contradictions<br></span>
+                    Your recent AI conversations
+
+                    will appear here.
+
+                </p>
+
+            </div>
 
         </div>
 
@@ -436,23 +427,76 @@ href="style.css">
 </div>
 
 <div class="right-column">
+    <div class="card" id="summary">
+
+        <div class="card-header">
+
+            <i class="fa-solid fa-file-lines"></i>
+
+            <h2>Executive Summary</h2>
+
+        </div>
+
+        <div id="summaryBox">
+
+            <div class="welcome-box">
+
+                <h3>
+
+                    No Summary Generated
+
+                </h3>
+
+                <p>
+
+                    Upload PDF documents.
+
+                    The application will automatically
+
+                    process all documents and generate
+
+                    an executive summary.
+
+                </p>
+
+            </div>
+
+        </div>
+        <div class="answer-actions">
+
+            <button id="copyBtn">
+
+                <i class="fa-solid fa-copy"></i>
+
+                Copy
+
+            </button>
+
+            <button id="downloadBtn">
+
+                <i class="fa-solid fa-download"></i>
+
+                Download
+
+            </button>
+
+        </div>
+
+    </div>
 
     <div class="card" id="chat">
 
         <div class="card-header">
 
             <i class="fa-solid fa-comments"></i>
-
             <h2>AI DocuMind Assistant</h2>
 
         </div>
 
         <p class="description">
-
             Ask anything about your uploaded documents.
             The AI answers only from the uploaded PDFs using
             Hybrid Retrieval (ChromaDB + BM25).
-
         </p>
 
         <textarea
@@ -574,80 +618,11 @@ href="style.css">
         </div>
 
     </div>
+    
 
-    <div class="card" id="sourcesSection">
+   
 
-        <div class="card-header">
-
-            <i class="fa-solid fa-book-open"></i>
-
-            <h2>Retrieved Sources</h2>
-
-        </div>
-
-        <div id="sources">
-
-            <div class="empty-state">
-
-                <img
-
-                    src="assets/1.png"
-
-                    alt="Sources">
-
-                <h3>
-
-                    No Sources Available
-
-                </h3>
-
-                <p>
-
-                    Retrieved document chunks
-
-                    will appear here after every answer.
-
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
-
-    <div class="card">
-
-        <div class="card-header">
-
-            <i class="fa-solid fa-clock-rotate-left"></i>
-
-            <h2>Recent Questions</h2>
-
-        </div>
-
-        <div id="chatHistory">
-
-            <div class="empty-state">
-
-                <h3>
-
-                    No Questions Yet
-
-                </h3>
-
-                <p>
-
-                    Your recent AI conversations
-
-                    will appear here.
-
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
+    
 
 </div>
 

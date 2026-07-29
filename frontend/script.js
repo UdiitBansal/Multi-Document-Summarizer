@@ -16,7 +16,7 @@ const processStatus = document.getElementById("processStatus");
 
 const question = document.getElementById("question");
 const answer = document.getElementById("answer");
-const sources = document.getElementById("sources");
+
 
 const pdfCount = document.getElementById("pdfCount");
 const chunkCount = document.getElementById("chunkCount");
@@ -438,7 +438,7 @@ async function generateSummary() {
     </div>
     `;
 
-    sources.innerHTML = "";
+   
 
     try {
 
@@ -481,13 +481,7 @@ async function generateSummary() {
         
         
 
-        // -------------------------------
-        // Display retrieved sources
-        // -------------------------------
-        displaySources(data.sources);
-
-        scrollToAnswer();
-
+       
         // -------------------------------
         // Save in chat history
         // -------------------------------
@@ -597,7 +591,7 @@ async function askAI() {
     </div>
     `;
 
-    sources.innerHTML = "";
+    
 
     try {
 
@@ -622,7 +616,7 @@ async function askAI() {
         const data = await response.json();
 
         console.log("CHAT RESPONSE:", data);
-        console.log("SOURCES:", data.sources);
+        
 
         askBtn.disabled = false;
 
@@ -648,7 +642,7 @@ async function askAI() {
 
         displayAnswer(data.answer);
 
-        displaySources(data.sources);
+        
         scrollToAnswer();
 
         chatHistory.push({
@@ -792,66 +786,7 @@ function updateHistory() {
 // DISPLAY SOURCES
 // =====================================================
 
-function displaySources(list) {
 
-    sources.innerHTML = "";
-
-    if (!list || list.length === 0) {
-
-        sources.innerHTML = `
-
-        <div class="source-card">
-
-            No Sources Found
-
-        </div>
-
-        `;
-
-        return;
-
-    }
-
-    list.forEach(item => {
-
-        const score = item.score || 0;
-        const percent = (score * 100).toFixed(1);
-
-        let color = "#ef4444";
-        if(score >= 0.80){
-        color="#22c55e";
-        }
-        else if(score >=0.50){
-
-        color="#f59e0b";
-        }
-
-        const div = document.createElement("div");
-
-        div.className = "source-card";
-
-        div.innerHTML = `
-        <h4>📄 ${item.source || "Unknown PDF"}</h4>
-        <p><strong>Page:</strong> ${item.page ?? "-"}</p>
-        <p><strong>Chunk:</strong> ${item.chunk || item.chunk_id || "-"}</p>
-        <p>
-        <strong>Confidence:</strong>
-        <span style="color:${color};font-weight:bold;">
-         ${percent}%
-        </span>
-        </p>
-        <hr>
-        <div class="source-preview">
-        ${item.preview || item.text || "No Preview Available"}
-        </div>
-        `;
-        
-
-        sources.appendChild(div);
-
-    });
-
-}
 
 // =====================================================
 // PART 4 STARTS HERE
@@ -980,11 +915,7 @@ function clearAll() {
 
     }
 
-    if (sources) {
-
-        sources.innerHTML = "";
-
-    }
+    
 
     chatHistory = [];
 
@@ -1071,17 +1002,15 @@ if (answer) {
 
         <br>
 
-        <ul style="text-align:left;display:inline-block;line-height:2;">
+        <ul style="text-align:left;display:inline-block;line-height:1.5;">
 
             <li>📄 Multi PDF Upload</li>
 
-            <li>🔍 Hybrid Search (BM25 + ChromaDB)</li>
+            <li>🔍 Hybrid Search </li>
 
             <li>🧠 AI Question Answering</li>
 
             <li>📝 Executive Summary</li>
-
-            <li>📌 Source Citation</li>
 
             <li>📥 Download AI Report</li>
 

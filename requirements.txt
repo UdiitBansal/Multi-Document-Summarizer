@@ -1,0 +1,64 @@
+# ==========================
+# Web Framework
+# ==========================
+fastapi
+uvicorn[standard]
+python-multipart
+
+# ==========================
+# AI & LLM
+# ==========================
+ollama
+langchain
+langchain-community
+sentence-transformers
+transformers
+torch
+accelerate
+
+# ==========================
+# Vector Database
+# ==========================
+chromadb
+
+# ==========================
+# Information Retrieval
+# ==========================
+rank-bm25
+
+# ==========================
+# PDF Processing
+# ==========================
+pymupdf
+pypdf
+
+# ==========================
+# Data Processing
+# ==========================
+numpy
+pandas
+
+# ==========================
+# Machine Learning
+# ==========================
+scikit-learn
+scipy
+
+# ==========================
+# Text Processing
+# ==========================
+nltk
+regex
+
+# ==========================
+# Report Generation
+# ==========================
+reportlab
+
+# ==========================
+# Utilities
+# ==========================
+tqdm
+requests
+python-dotenv
+typing-extensions

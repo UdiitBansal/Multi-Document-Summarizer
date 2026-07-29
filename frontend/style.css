@@ -758,7 +758,7 @@ opacity:1;
 
     gap:15px;
 
-    margin-bottom:22px;
+    margin-bottom:30px;
 
 }
 
@@ -1024,7 +1024,7 @@ opacity:1;
 
 #summaryBox{
 
-    min-height:220px;
+    height:350px;
 
     padding:20px;
 
@@ -1047,7 +1047,7 @@ textarea{
 
     width:100%;
 
-    min-height:180px;
+    min-height:100px;
 
     padding:20px;
 
@@ -1301,7 +1301,7 @@ textarea:focus{
     align-items:flex-start;
     text-align:left;
 
-    min-height:auto;
+    height:250px;
 
     padding:10px;
 }
@@ -1380,78 +1380,7 @@ textarea:focus{
 
 }
 
-/* ==========================================================
-   SOURCES
-========================================================== */
 
-#sources{
-
-    display:flex;
-
-    flex-direction:column;
-
-    gap:15px;
-
-    max-height:500px;
-
-    overflow-y:auto;
-
-}
-
-.source-card{
-
-    padding:16px;
-
-    background:#f8fbff;
-
-    border-left:5px solid var(--primary);
-
-    border-radius:18px;
-
-    transition:.35s;
-
-}
-
-.source-card:hover{
-
-    transform:translateY(-4px);
-
-    box-shadow:0 10px 25px rgba(0,0,0,.12);
-
-}
-
-.source-card h4{
-
-    color:var(--primary);
-
-    margin-bottom:10px;
-
-}
-.source-card hr{
-    margin:10px 0;
-}
-
-.source-card p{
-
-    color:#475569;
-    margin:6px 0;
-
-    line-height:1.8;
-
-    white-space:pre-wrap;
-
-}
-.source-preview{
-
-    margin-top:8px;
-
-    white-space:pre-wrap;
-
-    line-height:1.6;
-
-    word-break:break-word;
-
-}
 /* ==========================================================
    UPLOADED FILES
 ========================================================== */
@@ -1597,9 +1526,7 @@ textarea:focus{
     line-height:1.8;
 
 }
-/*=========================================
-SECTION
-=========================================*/
+
 
 /*=========================================
 FEATURE WRAPPER
