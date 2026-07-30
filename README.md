@@ -4,20 +4,20 @@ An AI-powered **Multi-Document Research Assistant** that enables users to upload
 ask questions, and retrieve accurate answers using **Retrieval-Augmented Generation (RAG)**. The system combines semantic search,
 keyword-based retrieval, and Large Language Models (LLMs) to provide intelligent document analysis.
 
-## ✨ Features
+##  Features
 
-- 📄 Upload and process multiple PDF documents
-- 🔍 OCR support for scanned PDFs using EasyOCR
-- 📝 Automatic text extraction and preprocessing
-- 🤖 AI-powered Question Answering
-- 📑 Executive Summary Generation
-- 🔎 Hybrid Retrieval using ChromaDB and BM25
-- 📚 Context-aware document retrieval
-- 🎯 Semantic Search with Sentence Transformers
-- 💬 Ollama LLM integration for answer generation
-- 🌐 Modern and responsive web interface
+-  Upload and process multiple PDF documents
+-  OCR support for scanned PDFs using EasyOCR
+-  Automatic text extraction and preprocessing
+-  AI-powered Question Answering
+-  Executive Summary Generation
+-  Hybrid Retrieval using ChromaDB and BM25
+-  Context-aware document retrieval
+-  Semantic Search with Sentence Transformers
+-  Ollama LLM integration for answer generation
+-  Modern and responsive web interface
 
-# 🛠️ Tech Stack
+#  Tech Stack
 
 ## Frontend
 - HTML5
@@ -45,7 +45,7 @@ keyword-based retrieval, and Large Language Models (LLMs) to provide intelligent
 ## Database
 - ChromaDB (Vector Database)
 
-# 📂 Project Structure
+#  Project Structure
 
 ```text
 Multi-Document/
@@ -70,7 +70,7 @@ Multi-Document/
 
 ---
 
-# ⚙️ Installation
+#  Installation
 
 ## 1. Clone the Repository
 
@@ -105,7 +105,7 @@ pip install -r requirements.txt
 
 ---
 
-# 🤖 Install Ollama
+#  Install Ollama
 
 Download and install Ollama from:
 
@@ -124,7 +124,7 @@ ollama list
 
 ---
 
-# ▶️ Run the Backend
+#  Run the Backend
 "bash
 uvicorn backend.app:app --reload
 "
@@ -133,7 +133,7 @@ The backend server will start at:
 "http://127.0.0.1:8000"
 
 ---
-# 🌐 Run the Frontend
+#  Run the Frontend
 
 Open the `index.html` file in your browser.
 
@@ -143,7 +143,7 @@ Use **VS Code Live Server** for a better development experience.
 
 ---
 
-# 📖 Usage
+#  Usage
 
 1. Start the FastAPI backend.
 2. Open the frontend in your browser.
@@ -153,7 +153,7 @@ Use **VS Code Live Server** for a better development experience.
 6. Ask questions related to the uploaded documents.
 7. Receive AI-generated answers with relevant document context.
 
-# 📦 Main Dependencies
+#  Main Dependencies
 
 - FastAPI
 - Uvicorn
@@ -176,7 +176,7 @@ pip install -r requirements.txt"
 
 ---
 
-# 🚀 Future Enhancements
+#  Future Enhancements
 
 - Support for Word and PowerPoint documents
 - Chat history
@@ -186,17 +186,8 @@ pip install -r requirements.txt"
 - Document comparison
 - Advanced analytics dashboard
 
-# 👨‍💻 Author
-
-**Udiit Bansal**
-
-PG-Diploma in Big Data Analytics (DBDA)
-
-CDAC Bengaluru
-
-GitHub: https://github.com/UdiitBansal
 ---
 
-# 📄 License
+#  License
 
 This project is developed for educational and research purposes.
