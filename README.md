@@ -74,34 +74,34 @@ Multi-Document/
 
 ## 1. Clone the Repository
 
-"bash
+```bash
 git clone https://github.com/UdiitBansal/Multi-Document-Summarizer.git
 cd Multi-Document-Summarizer
-"
+```
 
 ---
 
 ## 2. Create a Virtual Environment
 ### Windows
 
-"bash
+```bash
 python -m venv venv
 venv\Scripts\activate
-"
+```
 
 ### Linux / macOS
-"bash
+```bash
 python3 -m venv venv
 source venv/bin/activate
-"
+```
 
 ---
 
 ## 3. Install Dependencies
 
-"bash
+```bash
 pip install -r requirements.txt
-"
+```
 
 ---
 
@@ -113,24 +113,24 @@ https://ollama.com
 
 Pull the required model:
 
-"bash
+```bash
 ollama pull llama3.2
-"
+```
 
 Verify installation:
-"bash
+```bash
 ollama list
-"
+```
 
 ---
 
 #  Run the Backend
-"bash
+```bash
 uvicorn backend.app:app --reload
-"
+```
 The backend server will start at:
 
-"http://127.0.0.1:8000"
+http://127.0.0.1:8000
 
 ---
 #  Run the Frontend
@@ -171,8 +171,9 @@ Use **VS Code Live Server** for a better development experience.
 - Python-Multipart
 
 Install everything with:
-"bash
-pip install -r requirements.txt"
+```bash
+pip install -r requirements.txt
+```
 
 ---
 
