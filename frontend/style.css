@@ -3457,3 +3457,23 @@ font-size:36px;
     font-size:15px;
 
 }
+.selected-file{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:8px 12px;
+    margin-bottom:8px;
+    border:1px solid #ddd;
+    border-radius:8px;
+}
+
+.remove-file{
+    border:none;
+    background:none;
+    cursor:pointer;
+    font-size:16px;
+}
+
+.remove-file:hover{
+    color:red;
+}

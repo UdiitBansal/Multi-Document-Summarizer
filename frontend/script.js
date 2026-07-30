@@ -39,6 +39,8 @@ const heroUploadBtn =
 document.getElementById("heroUploadBtn");
 
 let chatHistory = [];
+let selectedFiles = [];
+let totalStartTime = 0;
 
 // =====================================================
 // HERO BUTTON
@@ -133,7 +135,50 @@ function showToast(message,color="#2563eb"){
     },3000);
 
 }
+function renderSelectedFiles() {
 
+    if (selectedFiles.length === 0) {
+
+        uploadStatus.innerHTML = "";
+        return;
+
+    }
+
+    let html = "<strong>Selected Files</strong><br><br>";
+
+    selectedFiles.forEach((file, index) => {
+
+        html += `
+        <div class="selected-file">
+
+            📄 ${file.name}
+            (${formatSize(file.size)})
+
+            <button
+            type="button"
+            class="remove-file"
+            data-index="${index}">
+            ❌
+            </button>
+                
+
+        </div>
+        `;
+
+    });
+
+    uploadStatus.innerHTML = html;
+    document.querySelectorAll(".remove-file").forEach(btn => {
+        btn.addEventListener("click", function () {
+            const index = Number(this.dataset.index);
+            selectedFiles.splice(index, 1);
+            renderSelectedFiles();
+        });
+    });
+
+    showToast(`${selectedFiles.length} PDF Selected`);
+
+}
 // =====================================================
 // FILE SIZE
 // =====================================================
@@ -160,35 +205,39 @@ function formatSize(bytes){
 // FILE SELECT
 // =====================================================
 
-if(pdfFiles){
+if (pdfFiles) {
 
-pdfFiles.addEventListener("change",()=>{
+    pdfFiles.addEventListener("change", () => {
 
-    if(pdfFiles.files.length===0){
+        const newFiles = Array.from(pdfFiles.files);
 
-        uploadStatus.innerHTML="";
+        // Maximum 5 PDFs
+        if (selectedFiles.length + newFiles.length > 5) {
 
-        return;
+            showToast("Maximum 5 PDFs allowed", "#ef4444");
+            pdfFiles.value = "";
+            return;
 
-    }
+        }
 
-    let html="<strong>Selected Files</strong><br><br>";
+        // Add only unique files
+        newFiles.forEach(file => {
 
-    for(const file of pdfFiles.files){
+            const exists = selectedFiles.some(
+                f => f.name === file.name && f.size === file.size
+            );
 
-        html+=`
-        📄 ${file.name}
-        (${formatSize(file.size)})
-        <br>
-        `;
+            if (!exists) {
+                selectedFiles.push(file);
+            }
 
-    }
+        });
 
-    uploadStatus.innerHTML=html;
+        renderSelectedFiles();
 
-    showToast(`${pdfFiles.files.length} PDF Selected`);
+        pdfFiles.value = "";
 
-});
+    });
 
 }
 
@@ -204,13 +253,14 @@ uploadBtn.addEventListener("click",uploadPDFs);
 
 async function uploadPDFs(){
 
-    if(!pdfFiles || pdfFiles.files.length===0){
+    if(selectedFiles.length===0){
 
         showToast("Please select PDF files","#ef4444");
 
         return;
 
     }
+    totalStartTime = performance.now();
 
     uploadBtn.disabled=true;
 
@@ -218,11 +268,9 @@ async function uploadPDFs(){
 
     const formData=new FormData();
 
-    for(const file of pdfFiles.files){
-
+    selectedFiles.forEach(file=>{
         formData.append("files",file);
-
-    }
+    });
 
     try{
 
@@ -285,6 +333,8 @@ async function uploadPDFs(){
         showToast("Upload Successful","#22c55e");
 
         await processDocuments();
+        selectedFiles = [];
+        renderSelectedFiles();
         pdfFiles.value="";
 
     }
@@ -365,14 +415,7 @@ async function processDocuments(){
 
         }
 
-        if(processingTime){
-
-            processingTime.textContent=
-            data.processing_time
-            ? data.processing_time.toFixed(2)+" s"
-            : "--";
-
-        }
+       
 
         if(modelName){
 
@@ -392,6 +435,11 @@ async function processDocuments(){
         showLoading("Generating Executive Summary...");
 
         await generateSummary();
+        if(processingTime){
+            const totalTime =
+            (performance.now() - totalStartTime) / 1000;
+            processingTime.textContent =totalTime.toFixed(2) + " s";
+        }
 
         hideLoading();
 
@@ -1010,9 +1058,9 @@ if (answer) {
 
             <li>🧠 AI Question Answering</li>
 
-            <li>📝 Executive Summary</li>
+           
 
-            <li>📥 Download AI Report</li>
+            
 
         </ul>
 
